@@ -1,37 +1,26 @@
 import { motion } from "framer-motion";
 
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 const IntegratedProjects = () => {
-  const isSmallScreen = window.innerWidth < 640;
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+  useEffect(() => {
+    setIsSmallScreen(window.innerWidth < 640);
+  }, []);
   return (
     <motion.section className="h-screen w-full snap-center relative flex justify-center items-center overflow-hidden">
       <div className="absolute inset-0 bg-transparent z-0">
         <p className="text-white text-center relative z-20 text-2xl sm:text-5xl font-clash mt-[20%]">
           Projects integrated into the Arrakis AI Ecosystem
         </p>
-
-        {/* <motion.div
-          className="flex justify-center items-center w-full h-400px gap-x-20"
-          initial={{ x: 0 }}
-          whileInView={{ x: -100 }}
-          transition={{ duration: 2.5, ease: "easeOut" }}
-        >
-          <Image src="/images/TelegramImage.svg" alt="IntegratedIcon" width={75} height={75} />
-          <Image src="/images/Solana.svg" alt="IntegratedIcon" width={305} height={305} />
-          <Image src="/images/Arweave.svg" alt="IntegratedIcon" width={305} height={305} />
-          <Image src="/images/Bittensor.svg" alt="IntegratedIcon" width={305} height={305} />
-          <Image src="/images/RedCircleImage.svg" alt="IntegratedIcon" width={75} height={75} />
-          <Image src="/images/TelegramImage.svg" alt="IntegratedIcon" width={75} height={75} />
-        </motion.div> */}
-
         <motion.div
           className="flex justify-center items-center w-full gap-x-6 sm:gap-x-20 mt-6 "
           initial={{ x: 0 }}
           whileInView={{ x: isSmallScreen ? -25 : -100 }}
           transition={{ duration: isSmallScreen ? 1 : 2.5, ease: "easeOut" }}
         >
-          {/* ✅ Responsive icon sizes using Tailwind (hidden div container controls) */}
           <div className="w-[40px] h-[40px] sm:w-[75px] sm:h-[75px] relative">
             <Image src="/images/TelegramImage.svg" alt="IntegratedIcon" fill />
           </div>
