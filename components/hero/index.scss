@@ -1,0 +1,53 @@
+.hero-main-text {
+  font-size: 35px;
+
+  @media (min-width: 640px) {
+    font-size: 40px;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 75px;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 95px;
+  }
+
+  background: linear-gradient(
+    to bottom right,
+    var(--lightVioletBtn),
+    var(--orangeBtn),
+    var(--darkOrange)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero-main-text-scrolled {
+  font-size: 35px;
+
+  @media (min-width: 640px) {
+    font-size: 30px;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 75px;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 95px;
+  }
+
+  background: linear-gradient(
+    to bottom right,
+    var(--almostWhiteColor),
+    var(--skinColor),
+    var(--lightPinkColor)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}

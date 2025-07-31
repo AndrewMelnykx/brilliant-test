@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+/* @tailwind base;
+@tailwind components; */
+@tailwind utilities;
+@layer base {
+  :root {
+    --background: #000000;
+    --lightVioletBtn: #963488;
+    --orangeBtn: #fc6f32;
+    --darkOrange: #ff4a59;
+    --almostWhiteColor: #ffd6f9;
+    --skinColor: #ffcbb4;
+    --lightPinkColor: #ffbec3;
+  }
+}
+/* Make font visible */
+@font-face {
+  font-family: "Clash Grotesk";
+  src: url("../assets/fonts/clash-grotesk/ClashGrotesk-Regular.woff2") format(".woff2");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #000000;
+    --foreground: #ededed;
+  }
+}
+
+/* body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100%;
+  background-color: var(--background);
+  overflow-x: hidden;
+}
+
+main {
+  height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+html {
+  scroll-snap-type: y mandatory;
+}
+section {
+  height: 100vh;
+  scroll-snap-align: start;
+} */
+
+html {
+  scroll-snap-type: y mandatory;
+  overflow-y: auto;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+main {
+  height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  /* no fixed height */
+}
+
+section {
+  scroll-snap-align: start;
+}

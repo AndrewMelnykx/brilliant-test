@@ -1,0 +1,50 @@
+.header-orange-custom-button {
+  position: relative;
+  background: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem 1.25rem;
+  width: 156px;
+  height: 54px;
+  border-radius: 85px;
+  font-size: 18px;
+  z-index: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  font-weight: bold;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 1.5px;
+    background: linear-gradient(
+      to bottom right,
+      var(--lightVioletBtn),
+      var(--orangeBtn),
+      var(--darkOrange)
+    );
+    border-radius: inherit;
+    z-index: -1;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    transition: opacity 0.3s ease;
+  }
+
+  &:hover {
+    background: linear-gradient(
+      to bottom right,
+      var(--lightVioletBtn),
+      var(--orangeBtn),
+      var(--darkOrange)
+    );
+  }
+
+  &:hover::before {
+    opacity: 0;
+  }
+}
