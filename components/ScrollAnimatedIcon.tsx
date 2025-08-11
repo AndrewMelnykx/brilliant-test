@@ -2,14 +2,16 @@
 
 import { motion, useSpring, useTransform } from "framer-motion";
 import { scaleProps } from "@/helpers/types";
+import { useIsScreenSmall } from "./context";
+
 import Image from "next/image";
 
 export default function ScrollAnimatedIcon({ scrollY }: scaleProps) {
+  const isSmallScreen = useIsScreenSmall();
   const startXY = 0.1 * 240;
   const endXY = 2.5 * 22080;
 
-  const isMobile = window.innerWidth < 640;
-  const rawY = useTransform(scrollY, [0, 2160], [isMobile ? 130 : -300, 2000]);
+  const rawY = useTransform(scrollY, [0, 2160], [isSmallScreen ? 130 : -300, 2000]);
   const rawX = useTransform(scrollY, [startXY, endXY], [0, 0]);
 
   const y = useSpring(rawY, { stiffness: 90, damping: 30 });

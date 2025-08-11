@@ -2,12 +2,14 @@ import { models } from "@/helpers/models";
 import RankingImage from "../../public/images/Ranking.svg";
 
 const LeaderBoardInfo = () => {
+  //ADD A LINIT FOR z for a rocket
   return (
-    <div className="h-[80%] w-[95%] bg-background  font-clash text-white">
-      <table className="w-full  table-auto text-left">
+    <div className="h-[80%]  overflow-x-auto sm:overflow-x-hidden  w-[95%] bg-background  font-clash text-white ">
+      {/* <table className="w-[360px] sm:w-full  table-auto text-left"> */}
+      <table className="min-w-[800px] sm:w-full table-auto text-left">
         <thead className="sticky top-0 bg-background z-10 ">
           <tr>
-            <th className="p-6">
+            <th className="p-2 sm:p-6">
               <span className="mr-10">#</span>Model Name
             </th>
             <th className="p-2">Average</th>

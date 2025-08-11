@@ -9,15 +9,16 @@ import {
 import { scaleProps } from "@/helpers/types";
 import { motion, useMotionValueEvent, useSpring, useTransform } from "framer-motion";
 import { useState } from "react";
+import { useIsScreenSmall } from "./context";
 
 export default function InfoCards({ scrollY }: scaleProps) {
   const [hasScrolled, setHasScrolled] = useState(false);
+  const isSmallScreen = useIsScreenSmall();
 
   useMotionValueEvent(scrollY, "change", latest => {
     setHasScrolled(latest > 30);
   });
 
-  const isSmallScreen = window.innerWidth < 640;
   const rowY = useTransform(
     scrollY,
     [0, 20],

@@ -1,12 +1,12 @@
 import { BlackButton } from "../custom/black-button";
+import { CustomButton } from "../custom/button";
 import Image from "next/image";
 
 import "./index.scss";
-import { CustomButton } from "../custom/button";
 
 const Header = () => {
   return (
-    <div className="w-full h-[80px] flex items-center justify-center z-20 mt-[-10%] sm:mt-[2%]">
+    <div className="w-full h-[80px] flex items-center justify-center z-20 mt-[-10%] sm:mb-[1%]">
       <Image
         src="/images/Vector 6.svg"
         alt="BlueSplash"

@@ -37,4 +37,6 @@ const getGradientByIndex = (index: number) => {
   return gradients[index % gradients.length];
 };
 
-export { containerVariants, itemVariants, heroCardData, getGradientByIndex };
+const smallScreenSize = 640;
+
+export { containerVariants, itemVariants, heroCardData, getGradientByIndex, smallScreenSize };

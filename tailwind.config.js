@@ -9,7 +9,7 @@ const config = {
   ],
   theme: {
     fontFamily: {
-      clash: ["Clash Grotesk", "sans-serif"],
+      clash: ["var(--font-clash)"],
     },
     colors: {
       customYellow: "rgb(255, 234, 0)",

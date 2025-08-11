@@ -22,15 +22,15 @@ export default function HeroSection({ scrollY }: scaleProps) {
   return (
     <motion.section className="  h-[calc(100vh+40px)] w-full snap-none grid place-items-center z-40 relative font-clash">
       <Header />
-      <div className="w-full bg-transparent flex flex-col items-center mt-2% ">
+      <div className="w-full bg-transparent flex flex-col items-center mt-[-15%]  sm:mt-2% ">
         <motion.div
-          className={`w-full max-h-[432px]  lg:ml-12 ml-2 bg-transparent  `}
+          className={`w-[350px] sm:w-full max-h-[432px]  ml-10 sm:ml-12  bg-transparent  `}
           style={{ y }}
         >
           <h1 className={`${heroTextStyle} font-clash z-20`}>
             A new economic primitive for funding decentralized AI
           </h1>
-          <h2 className="text-white  text-xs sm:text-l  ml-1 z-20 mt-5 sm:mt-0">
+          <h2 className="text-white w-[300px] sm:w-full text-xl sm:text-l  ml-1 z-20 mt-5 sm:mt-0">
             We track, rank and pay for the best open source decentralized LLMs to compete against
             OpenAI
           </h2>

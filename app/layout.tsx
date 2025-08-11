@@ -1,12 +1,15 @@
-//SWITCH FONTS HERE
-
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import localFont from "next/font/local";
+
 import "./globals.css";
 
-const inter = Inter({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const clashFont = localFont({
+  src: [
+    { path: "../public/fonts/clash-grotesk/ClashGrotesk-Medium.woff2", weight: "400" },
+    { path: "../public/fonts/clash-grotesk/ClashGrotesk-Medium.woff2", weight: "700" },
+  ],
+  variable: "--font-clash",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -21,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} antialiased`}>{children}</body>
+      <body className={`${clashFont.className}`}>{children}</body>
     </html>
   );
 }

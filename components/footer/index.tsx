@@ -4,11 +4,17 @@ import { BlackButton } from "../custom/black-button";
 const Footer = () => {
   return (
     <section className="h-[100vh] w-full snap-start bg-background flex items-center justify-center flex-col ">
-      <h5 className="text-4xl text-white font-clash mt-[10%]">
+      <h5 className="text-xl sm:text-4xl text-white font-clash mt-[10%] ">
         Join our community and harvest $SALT
       </h5>
       <div className="flex w-full border-white rounded h-[600px] justify-end items-end flex-col relative">
-        <Image src="/images/MoonSurface.svg" alt="moon-surface" width={1920} height={552} />
+        <Image
+          src="/images/MoonSurface.svg"
+          alt="moon-surface"
+          style={{ objectFit: "cover" }}
+          fill
+          sizes="100vw"
+        />
         <div className="w-full h-[550px] flex absolute top-0">
           <div
             className="flex w-full items-center justify-center absolute bottom-30 "
