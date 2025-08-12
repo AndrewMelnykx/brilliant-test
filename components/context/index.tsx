@@ -1,3 +1,5 @@
+"use client";
+
 import { smallScreenSize } from "@/helpers/constants";
 import { createContext, useContext, useState, useEffect } from "react";
 
